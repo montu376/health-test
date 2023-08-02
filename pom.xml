@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.montu376</groupId>
     <artifactId>jwthelpermontu</artifactId>
-    <version>2.0.0</version>
+    <version>1.0.2</version>
     <name>Archetype - jwthelper</name>
     <url>http://maven.apache.org</url>
     <description>JwtHelper Will help me in my Wings exam - With Spring security 5.7.0</description>
@@ -48,7 +48,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-            <version>3.1.2</version>
+            <version>2.6.6</version>
         </dependency>
 
         <dependency>

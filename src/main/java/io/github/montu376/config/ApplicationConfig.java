@@ -1,12 +1,14 @@
 package io.github.montu376.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 
-public class ApplicationConfig  {
+public class ApplicationConfig  extends WebSecurityConfigurerAdapter {
 
     private String ignoreantmatcher[];
     private String hasRolesMathcher[];
@@ -16,23 +18,21 @@ public class ApplicationConfig  {
     }
 
 
+    @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().requestMatchers("/h2-console/**");
+        web.ignoring().antMatchers("/h2-console/**");
     }
 
 
-    public SecurityFilterChain configure(HttpSecurity http) throws Exception {
-        http.cors(httpSecurityCorsConfigurer -> {
-            httpSecurityCorsConfigurer.disable();
-        }).authorizeHttpRequests(authorizationManagerRequestMatcherRegistry -> {
-            authorizationManagerRequestMatcherRegistry.requestMatchers(this.ignoreantmatcher).permitAll().anyRequest().authenticated();
-        }).sessionManagement(httpSecuritySessionManagementConfigurer -> {
+    @Override
+    public void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable();
+        http.cors().disable();
+        http.sessionManagement(httpSecuritySessionManagementConfigurer -> {
             httpSecuritySessionManagementConfigurer.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        }).csrf(httpSecurityCsrfConfigurer -> {
-            httpSecurityCsrfConfigurer.disable();
         });
+        http.authorizeRequests().antMatchers(ignoreantmatcher).permitAll().anyRequest().authenticated();
 
-        return http.build();
     }
 
 
