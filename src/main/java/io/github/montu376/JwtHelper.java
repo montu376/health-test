@@ -5,18 +5,27 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import io.github.montu376.constant.Constant;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
 public class JwtHelper {
+    private Logger logger;
 
-    public String tokenParserFromRequest(HttpServletRequest request,String AUTHZTOKEN){
+    public JwtHelper(){
+        this.logger = LoggerFactory.getLogger(getClass());
+    }
+
+    public String tokenParserFromRequest(HttpServletRequest request, String AUTHZTOKEN, boolean bearerPresent){
         String CHECKSTRING = (AUTHZTOKEN == null) ? Constant.AUTHORIZATION:AUTHZTOKEN;
         String tokenString = request.getHeader(CHECKSTRING);
+        this.logger.info("TokenString " + tokenString);
         if(tokenString!=null){
-            if(!tokenString.contains(Constant.BEARER)){
-                return  null;
+            if(tokenString.contains(Constant.BEARER) == false && bearerPresent){
+                return  tokenString;
             }
             return tokenString.substring(7);
         }
@@ -36,7 +45,7 @@ public class JwtHelper {
         }
         return decodedJWT.getSubject();
     }
-    public  boolean validateToken(String token,String secret){
+    public boolean validateToken(String token,String secret){
         Date expiry = (Date) retriveData(token,Date.class,secret);
         String subject = (String) retriveData(token,String.class,secret);
         return true;
