@@ -25,7 +25,7 @@ public class ApplicationConfig  {
         http.cors(httpSecurityCorsConfigurer -> {
             httpSecurityCorsConfigurer.disable();
         }).authorizeHttpRequests(authorizationManagerRequestMatcherRegistry -> {
-            authorizationManagerRequestMatcherRegistry.requestMatchers(this.ignoreantmatcher).permitAll().anyRequest().authenticated();
+            authorizationManagerRequestMatcherRegistry.requestMatchers(this.getIgnoreantmatcher()).permitAll().anyRequest().authenticated();
         }).sessionManagement(httpSecuritySessionManagementConfigurer -> {
             httpSecuritySessionManagementConfigurer.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         }).csrf(httpSecurityCsrfConfigurer -> {

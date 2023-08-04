@@ -17,14 +17,13 @@ class JwtHelperTest {
     String subject = "montu376";
 
     String token = "";
-    JwtHelper helper = new JwtHelper();
+    JwtHelper helper = new JwtHelper(secret);
 
     Logger logger = LoggerFactory.getLogger(getClass());
 
     @BeforeEach
     void setUp() {
-        this.token = helper.getToken(subject,secret);
-
+        this.token = helper.getToken(subject);
     }
 
     @Test
@@ -36,18 +35,11 @@ class JwtHelperTest {
     void validateToken() {
         Assertions.assertNotEquals("",this.token);
         logger.info(this.token);
-        Assertions.assertTrue(this.helper.validateToken(this.token,this.secret));
-        logger.info("Validation : "+ this.helper.validateToken(this.token,this.secret));
-
+        Assertions.assertTrue(this.helper.validateToken(this.token));
+        logger.info("Validation : "+ this.helper.validateToken(this.token));
     }
 
     @Test
     void tokenParserFromRequestTest() {
-
-
-
-
-
-
     }
 }
