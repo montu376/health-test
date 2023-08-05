@@ -11,9 +11,7 @@ public class ApplicationConfig  {
     private String ignoreantmatcher[];
     private String hasRolesMathcher[];
 
-    public ApplicationConfig(String ignoreantmatcher[]){
-        this.ignoreantmatcher = ignoreantmatcher;
-    }
+    public ApplicationConfig(){}
 
 
     public void configure(WebSecurity web) throws Exception {
