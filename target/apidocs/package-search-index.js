@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"io.github.montu376"},{"l":"io.github.montu376.authentication"},{"l":"io.github.montu376.config"},{"l":"io.github.montu376.constant"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"io.github.montu376"},{"l":"io.github.montu376.authentication"},{"l":"io.github.montu376.config"},{"l":"io.github.montu376.constant"},{"l":"io.github.montu376.services"}];updateSearchResults();

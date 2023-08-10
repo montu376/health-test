@@ -37,7 +37,7 @@ public class ApplicationConfig  extends WebSecurityConfigurerAdapter {
         });
         http.authorizeRequests().antMatchers(ignoreantmatcher).permitAll().anyRequest().authenticated();
 
-            }
+    }
 
 
     public String[] getIgnoreantmatcher() {

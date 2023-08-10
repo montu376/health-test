@@ -20,22 +20,24 @@
 -docencoding
 'UTF-8'
 -doctitle
-'Archetype - jwthelper 1.0.2 API'
+'Archetype - jwthelper 1.0.3 API'
 -linkoffline
 'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/coolm/OneDrive/Desktop/preparation/variation/two/jwthelper/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'Archetype - jwthelper 1.0.2 API'
+'Archetype - jwthelper 1.0.3 API'
 io.github.montu376.authentication
 io.github.montu376.config
 io.github.montu376.constant
 io.github.montu376
+io.github.montu376.services
 'C:/Users/coolm/OneDrive/Desktop/preparation/variation/two/jwthelper/src/main/java/io/github/montu376/authentication/JwtAuthentication.java'
 'C:/Users/coolm/OneDrive/Desktop/preparation/variation/two/jwthelper/src/main/java/io/github/montu376/authentication/JwtAuthenticationProvider.java'
 'C:/Users/coolm/OneDrive/Desktop/preparation/variation/two/jwthelper/src/main/java/io/github/montu376/config/ApplicationConfig.java'
 'C:/Users/coolm/OneDrive/Desktop/preparation/variation/two/jwthelper/src/main/java/io/github/montu376/constant/Constant.java'
 'C:/Users/coolm/OneDrive/Desktop/preparation/variation/two/jwthelper/src/main/java/io/github/montu376/JwtHelper.java'
+'C:/Users/coolm/OneDrive/Desktop/preparation/variation/two/jwthelper/src/main/java/io/github/montu376/services/ApplicationService.java'
 C:\Users\coolm\.m2\repository\com\auth0\java-jwt\4.4.0\java-jwt-4.4.0.jar = 1690003696550
 C:\Users\coolm\.m2\repository\org\springframework\boot\spring-boot-starter-security\2.6.6\spring-boot-starter-security-2.6.6.jar = 1690820374446
 C:\Users\coolm\.m2\repository\org\springframework\boot\spring-boot-starter\2.6.6\spring-boot-starter-2.6.6.jar = 1690820374068
@@ -66,22 +68,22 @@ C:\Users\coolm\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.34\t
 C:\Users\coolm\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.34\tomcat-embed-el-9.0.34.jar = 1690195346146
 C:\Users\coolm\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.34\tomcat-embed-websocket-9.0.34.jar = 1690195346262
 C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\src\main\java = 1690632095256
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\allclasses-index.html = 1690990840304
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\allpackages-index.html = 1690990840307
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\copy.svg = 1690990840341
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\element-list = 1690990840179
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\help-doc.html = 1690990840336
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\index-all.html = 1690990840328
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\index.html = 1690990840292
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\jquery-ui.overrides.css = 1690990840377
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\member-search-index.js = 1690990840314
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\module-search-index.js = 1690990840310
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\overview-summary.html = 1690990840330
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\overview-tree.html = 1690990840287
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\package-search-index.js = 1690990840311
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\script.js = 1690990840340
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\search.js = 1690990840346
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\serialized-form.html = 1690990840234
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\stylesheet.css = 1690990840338
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\tag-search-index.js = 1690990840315
-C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\type-search-index.js = 1690990840312
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\allclasses-index.html = 1691398062513
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\allpackages-index.html = 1691398062517
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\copy.svg = 1691398062561
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\element-list = 1691398062318
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\help-doc.html = 1691398062554
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\index-all.html = 1691398062543
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\index.html = 1691398062488
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\jquery-ui.overrides.css = 1691398062603
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\member-search-index.js = 1691398062524
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\module-search-index.js = 1691398062519
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\overview-summary.html = 1691398062547
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\overview-tree.html = 1691398062481
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\package-search-index.js = 1691398062522
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\script.js = 1691398062558
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\search.js = 1691398062564
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\serialized-form.html = 1691398062409
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\stylesheet.css = 1691398062557
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\tag-search-index.js = 1691398062525
+C:\Users\coolm\OneDrive\Desktop\preparation\variation\two\jwthelper\target\apidocs\type-search-index.js = 1691398062523

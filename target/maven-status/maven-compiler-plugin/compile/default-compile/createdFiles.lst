@@ -1,5 +1,6 @@
-io\github\montu376\authentication\JwtAuthentication.class
 io\github\montu376\authentication\JwtAuthenticationProvider.class
 io\github\montu376\constant\Constant.class
 io\github\montu376\config\ApplicationConfig.class
+io\github\montu376\services\ApplicationService.class
+io\github\montu376\authentication\JwtAuthentication.class
 io\github\montu376\JwtHelper.class
